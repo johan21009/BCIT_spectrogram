@@ -119,7 +119,7 @@ def procesar_archivo(idx):
         ch_names = events[0].info['ch_names']  # Obtener nombres de canales
         for ch in ch_names:
             power = event.compute_tfr(method="multitaper", freqs=freqs, n_cycles=n_cycles, picks=ch)
-            path = "/data/castrogaray-j/Spectrogram_images/subject_{}_class_{}_label_{}_event_{}_channel_{}.png".format(int(pkl[8:10]), int(pkl[-5]), label, event_idx, ch)
+            path = "/data/castrogaray-j/Spectrogram_images/subject_{}_class_{}_label_{}_event_{}_channel_{}.png".format(int(pkl[8:10]), int(pkl[-5]), label, idx, ch)
             plot_spectrogram(power, path)
         #del power
         #gc.collect()
@@ -131,7 +131,7 @@ def procesar_archivo(idx):
 
 
 if __name__ == "__main__":
-    num_procesos = min(56, len(pkl_files))
+    num_procesos = min(56, len(pkl_files[:2]))
     print(num_procesos)
 
     parametros = list(range(num_procesos))  # Lista de parámetros del 0 al 55
@@ -142,4 +142,4 @@ if __name__ == "__main__":
     # with multiprocessing.Pool(processes=num_procesos) as pool:
     #     pool.map(procesar_archivo, range(num_procesos))
     with multiprocessing.Pool(processes=num_procesos) as pool:
-        pool.map(procesar_archivo, range(len(pkl_files)))  # Enviar solo índices válidos
+        pool.map(procesar_archivo, range(len(pkl_files[:2])))  # Enviar solo índices válidos
