@@ -1,1 +1,7 @@
 *.txt
+*.pkl
+*.csv
+transformers_performance-Copy*
+script_extract_spectrogram_ICA*
+CNN*
+Preprocess_images.ipynb
