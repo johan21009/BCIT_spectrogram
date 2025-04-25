@@ -2,6 +2,6 @@
 *.pkl
 *.csv
 transformers_performance-Copy*
-script_extract_spectrogram_ICA*
 CNN*
 Preprocess_images.ipynb
+.ipynb_checkpoints/script_extract_spectrogram_ICA-ERDS-checkpoint.py
