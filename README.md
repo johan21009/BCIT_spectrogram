@@ -22,7 +22,6 @@ The methodology integrates several signal processing techniques including:
 | `extract_spectrogram.ipynb` | Jupyter notebook to generate spectrograms from preprocessed EEG data. |
 | `script_extract_spectrogram.py` | Python script version of the spectrogram extraction pipeline. |
 | `script_extract_spectrogram_CH-ERDS.py` | Extracts channel-wise ERDS-based spectrograms for each EEG segment. |
-| `script_extract_spectrogram_ICA.py` | Script for spectrogram extraction after ICA-based artifact correction. |
 | `transformers_performance.ipynb` | Trains a Vision Transformer (ViT) on spectrogram images to classify driving performance. |
 | `transformers_performance-EEG.ipynb` | Alternate or extended version of the ViT training notebook. |
 | `paths_with_labels.csv` | Contains paths to spectrogram images with associated Good/Bad performance labels. |
